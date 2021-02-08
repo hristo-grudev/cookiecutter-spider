@@ -6,4 +6,4 @@ DB Schema:
 
 title
 content
-date
+date 
