@@ -16,7 +16,7 @@ class {{cookiecutter.repo_name_caps}}Spider(scrapy.Spider):
 		yield from response.follow_all(post_links, self.parse_post)
 
 		next_page = response.xpath('//div[@class="pagination pagination__posts"]/ul/li[@class="next"]/a/@href').getall()
-		yield from response.follow_all(next_page, self.parse_post)
+		yield from response.follow_all(next_page, self.parse)
 
 
 	def parse_post(self, response):
